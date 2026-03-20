@@ -1,0 +1,128 @@
+:root {
+    --logo-grey: #727B81;
+    --blue: #0A91DE;
+    --grey: #666F74;
+    --light-grey: #DDDDDD;
+}
+
+/* global typography */
+body {
+    background-color: #eee;
+    color: var(--grey);
+    font-family: "Manrope", sans-serif;
+    display: flex;
+}
+
+/* utilities */
+.inner-container {
+    margin: auto;
+    max-width: 1440px;
+}
+
+.main-menu {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1.5rem;
+    margin-top: 24px;
+    padding: 0;
+}
+
+/* typography */
+h1 {
+    font-family: "Nunito", sans-serif;
+    font-size: 1.25rem;
+}
+
+span {
+    color: var(--blue);
+}
+
+p {
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-bottom: 1px solid var(--light-grey);
+    padding: .5rem 0;
+}
+
+.main-menu ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.main-menu li {
+    display: flex;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s;
+    font-size: 1rem;
+}
+
+a:visited {
+    color: var(--grey);
+}
+
+a:hover,
+a:focus {
+    font-weight: 700;
+}
+
+/* components */
+header {
+    background-color: #fff;
+    border: 1px solid var(--light-grey);
+    padding: 1rem;
+    width: 14.5rem;
+    color: var(--grey);
+}
+
+svg {
+    height: 1.6875rem;
+    color: var(--grey);
+}
+
+.main-menu li a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.sub-menu {
+    position: absolute;
+    left: 9.625rem;
+    top: -1.125rem;
+    min-width: 174px;
+    background-color: #fff;
+    border: 1px solid var(--blue);
+    border-radius: .4375rem;
+    box-shadow: var(--light-grey);
+    z-index: 1;
+    visibility: 0;
+    opacity: 0;
+}
+
+.sub-menu li {
+    font-size: 1.125rem;
+    border-bottom: 1px solid #ddd;
+    padding: 0.5rem 0;
+    margin: 0.5rem 1.125rem;
+}
+
+.sub-menu li:last-of-type {
+    border-bottom: none;
+}
+
+.sub-menu li:hover a,
+.main-menu li:hover svg path {
+    color: var(--blue);
+    font-weight: 700;
+
+}
+
+.main-menu li:hover .sub-menu {
+    visibility: visible;
+    opacity: 1;
+}
